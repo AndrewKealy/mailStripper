@@ -1,0 +1,41 @@
+{
+  "name": "Mail Stripper",
+  "version": "1.0",
+  "description": "Getting text from mail online!",
+
+  "content_scripts": [
+    {
+    "matches":["https://www.dailymail.co.uk/*/article*"],
+    "js": ["content.js"]
+  }
+  ],
+  "permissions": [
+    "declarativeContent",
+    "tabs"
+  ],
+
+ "background": {
+    "scripts": ["background.js"]
+  },
+
+
+  "page_action": {
+    "default_icon":{
+      "16": "images/img16.png",
+      "32": "images/img32.png",
+      "48": "images/img48.png",
+      "128": "images/img128.png"
+    },
+    "default_popup":  "parsedText.html",
+    "default_title": "A popup with just the text from an mail online article"
+  },
+
+
+  "icons": {
+    "16": "images/img16.png",
+    "32": "images/img32.png",
+    "48": "images/img48.png",
+    "128": "images/img128.png"
+  },
+  "manifest_version": 2
+}
