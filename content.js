@@ -6,8 +6,6 @@ chrome.runtime.onMessage.addListener(gotMessage);
 
 function gotMessage(message, sender, sendResponse){
   if(message.txt=="getContent"){
-    console.log("I got a message!!!");
-
     let bylines = document.getElementsByClassName("author");
     let paragraphs = "";
     for (var i = 0; i<bylines.length;i++){
